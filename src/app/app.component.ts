@@ -1,4 +1,4 @@
-import { AfterContentInit, AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,8 +6,8 @@ import { AfterContentInit, AfterViewInit, Component, OnInit } from '@angular/cor
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  grid: any[][] = Array.from(Array(20), () => new Array(20).fill('white'));
-  grid2: any[][] = Array.from(Array(20), () => new Array(20).fill('white'));
+  grid: any[][] = Array.from(Array(80), () => new Array(80).fill('white'));
+  grid2: any[][] = Array.from(Array(80), () => new Array(80).fill('white'));
 
   ngOnInit() {
     setInterval(() => this.update(), 1000);
@@ -50,6 +50,6 @@ export class AppComponent implements OnInit {
     }
 
     this.grid = this.grid2
-    this.grid2 = Array.from(Array(20), () => new Array(20).fill('white'));
+    this.grid2 = Array.from(Array(80), () => new Array(80).fill('white'));
   }
 }
