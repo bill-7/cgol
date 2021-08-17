@@ -1,0 +1,15 @@
+<div *ngFor="let row of grid; let i = index">
+  <ng-container *ngFor="let cell of row; let j = index">
+    <button [ngStyle]="{'background-color': cell }" (click)="click(i, j)">&nbsp;&nbsp;</button>
+  </ng-container>
+  <br>
+</div>
+<!-- <br><br><br>
+<div *ngFor="let row of grid2; let i = index">
+  <ng-container *ngFor="let cell of row; let j = index">
+    <button [ngStyle]="{'background-color': cell }">&nbsp;&nbsp;</button>
+  </ng-container>
+  <br>
+</div> -->
+
+<!-- <button (click)="start()">Update</button> -->
