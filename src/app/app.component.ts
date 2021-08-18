@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { empty } from 'rxjs';
 
 @Component({
   selector: 'app-root',
