@@ -1,5 +1,10 @@
 <div *ngFor="let row of grid; let i = index">
   <ng-container *ngFor="let cell of row; let j = index">
-    <button [ngStyle]="{'background-color': cell }" (click)="click(i, j)">&nbsp;&nbsp;</button>
+    <button 
+      [ngStyle]="{'background-color': cell }" 
+      (mousedown)="click(i, j)" 
+      (mouseover)="over(i, j)"
+      (mouseup)="stop()"
+    >&nbsp;&nbsp;</button>
   </ng-container><br>
 </div>
